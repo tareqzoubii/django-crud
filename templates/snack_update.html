@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content %}
+     <h3>You can only update the purchaser</h3>
+     <h3>Update  {{thing.title}} </h3>
+     <form   method='post'>
+          {% csrf_token %}
+          {{form.as_p}}
+          <input type='submit' />
+     </form>
+     <button><a href="{% url 'snack_list'%}">Cancel Update</a></button>
+
+{% endblock content%}
