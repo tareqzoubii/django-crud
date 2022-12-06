@@ -42,7 +42,7 @@ class SnackTest(TestCase):
         data={
             'title':'test',
             'description':"Test",
-            'purchaser':"Test"
+            'purchaser':self.user.id # because of changing the purchaser from charField to foreignkey
 
          }
         url = reverse('snack_create')

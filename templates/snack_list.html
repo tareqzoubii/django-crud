@@ -2,7 +2,6 @@
 {% block content %}
 <button><a href="{% url 'snack_create'%}">Create a new snack</a></button>
 {% for snack in object_list %}
-        
         <h3>{{snack.title}}</h3>
         <button><a href="{% url 'snack_detail' snack.id%}">View detail</a></button>
         <button><a href="{% url 'snack_update' snack.id%}">Update</a></button>
